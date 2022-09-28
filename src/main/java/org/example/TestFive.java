@@ -3,10 +3,10 @@ package org.example;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -21,22 +21,22 @@ public class TestFive {
     public ChromeDriver driver;
     public WebDriverWait wait;
 
-    @BeforeAll
+    @BeforeClass
     public static void setDriver() {
         WebDriverManager.chromedriver().setup();
     }
 
-    @BeforeEach
+    @BeforeTest
     public void setupWait() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    @BeforeEach
+    @BeforeTest
     public void setup() {
         driver = new ChromeDriver();
     }
 
-    @AfterEach
+    @AfterTest
     public void quit() {
         driver.quit();
     }
