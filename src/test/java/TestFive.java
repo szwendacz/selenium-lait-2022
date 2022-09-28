@@ -1,7 +1,3 @@
-package org.example;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
