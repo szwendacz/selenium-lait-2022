@@ -77,7 +77,7 @@ public class TestFive {
 
     @Test
     public void testLocalFile() {
-        driver.get("file:///home.html");
+        driver.get("home.html");
         String text =  driver.findElement(By.xpath("/html/body/p")).getText();
         Assert.assertEquals("jestem tekstem", text);
     }
