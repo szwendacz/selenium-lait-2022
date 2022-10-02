@@ -78,7 +78,7 @@ public class TestFive {
     @Test
     public void testLocalFile() {
         driver.get("file:///Users/bartlomiej.kalinski/Documents/selenium-niedziela/home.html");
-        String text =  driver.findElement(By.xpath("//p")).getText();
+        String text =  driver.findElement(By.xpath("/html/body/p")).getText();
         Assert.assertEquals("jestem tekstem", text);
     }
 
