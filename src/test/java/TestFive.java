@@ -75,4 +75,11 @@ public class TestFive {
         Assert.assertTrue(message_is_displayed);
     }
 
+    @Test
+    public void testLocalFile() {
+        driver.get("file:///Users/bartlomiej.kalinski/Documents/selenium-niedziela/home.html");
+        String text =  driver.findElement(By.xpath("//p")).getText();
+        Assert.assertEquals("jestem tekstem", text);
+    }
+
 }
